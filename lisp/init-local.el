@@ -141,5 +141,6 @@
 	(setq-default line-spacing nil)))
 ;; ENS: toggle-line-spacing
 
+(require 'xcscope)
 
 (provide 'init-local)
