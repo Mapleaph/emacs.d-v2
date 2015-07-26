@@ -39,17 +39,15 @@
   ;; bind delete-other-windows with <f1>
   (define-key global-map [(f1)] 'delete-other-windows)
   ;; key binding for elisp-index-search
-  (global-set-key (kbd "<f8>") 'elisp-index-search))
-
+  (global-set-key (kbd "<f8>") 'elisp-index-search)
+  ;; jump to speedbar frames
+  (global-set-key (kbd "<f5>") 'speedbar-get-focus))
 (wk-key-init)
 ;; END: wk-key-init
 
-
 ;; BEGIN: wk-c-mode-common-hook
-
 (defun wk-c-mode-common-hook()
   (c-set-style "K&R")
-  (setq c-basic-offset 4)
   (c-toggle-auto-hungry-state t)
   (define-key c-mode-base-map [(return)] 'newline-and-indent))
 (add-hook 'c-mode-common-hook 'wk-c-mode-common-hook)
